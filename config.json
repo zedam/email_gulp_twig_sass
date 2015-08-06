@@ -1,0 +1,20 @@
+{
+  "APIKEY": "7e48945eb36f74ddca54cbfb0588c099-us9",
+
+  "template_file": "index",
+
+  "testing": {
+    "from": "test@bravoure.nl",
+    "to": "izigelbaum@gmail.com", //Set a new tester email
+    "subject": "Bravoure testing"
+  },
+
+  "auth": {
+    "mailgun": {
+        "user": "postmaster@sandbox5ef585153d2a469184aef254201dcb15.mailgun.org",
+        "pass": "147852bravoure"
+    }
+  },
+
+  "litmus": "Your Litmus static email address"
+}

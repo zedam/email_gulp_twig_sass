@@ -1,0 +1,25 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+	<table class="wrapper">
+		<tr class="headerText">
+			<td>
+				<p>This is a bit of header text that should show in the email client 2</p>
+			</td>
+		</tr>
+		<tr class="topImage">
+			<td>
+				<img src="http://placehold.it/550x250/E82C0C/000000/&amp;text=Enshrined!">
+			</td>
+		</tr>
+		<tr class="mainBody">
+			<td>
+				{% include 'partial/_content.twig' with {
+					title: 'This is a sample email template',
+					image: 'http://placehold.it/200x200/E82C0C/000000/&amp;text=Side',
+				} only %}
+			</td>
+		</tr>
+	</table>
+{% endblock %}
