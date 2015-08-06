@@ -1,3 +1,4 @@
+
 # Email Template - Gulp-Twig-SASS
 
 Email T - Gulp-Twig-SASS is a variation of Gulp Email Creator, which is a gulp workflow inspired by [Lee Munroe's](https://github.com/leemunroe) [grunt-email-design](https://github.com/leemunroe/grunt-email-design)  workflow.
@@ -6,7 +7,7 @@ It aims to help speed up email template production by allowing you to use SCSS a
 
 # Installation
 
-To use Gulp-Email-Creator you need to have both [Node.js](http://nodejs.org/) and [Gulp.js](http://gulpjs.com/) installed . 
+To use GULP TWIG SASS you need to have both [Node.js](http://nodejs.org/) and [Gulp.js](http://gulpjs.com/) installed . 
 
 You can install it by cloning this repository to a local folder and running the following from inside the directory.
 
