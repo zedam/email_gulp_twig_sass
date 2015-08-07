@@ -49,10 +49,6 @@ gulp.task('build', function() {
         .pipe(gulp.dest('./'));
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> gulp tasks
 // Build our dev templates
 gulp.task('build_dev', function() {
     return gulp.src('src/html/' + config.template_file + '.twig')
