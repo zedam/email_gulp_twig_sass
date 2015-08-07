@@ -17,16 +17,6 @@ var twig = require('gulp-twig');
 // Include the config
 var config = require('./config.json');
 
-
-gulp.task('compile', function () {
-    'use strict';
-    var twig = require('gulp-twig');
-    return gulp.src('./' + config.template_file + '.twig')
-      .pipe(twig())
-      .pipe(gulp.dest('./'));
-});
-
-gulp.task('default', ['compile']);
 // Compile Our Sass
 gulp.task('sass', function() {
     return gulp.src('src/scss/*.scss')
@@ -55,6 +45,15 @@ gulp.task('build', function() {
         .pipe(inlinesource())
         .pipe(inline(config.APIKEY, false))
         .pipe(gulp.dest('./output'))
+        .pipe(reload({stream:true}))
+        .pipe(gulp.dest('./'));
+});
+
+// Build our dev templates
+gulp.task('build_dev', function() {
+    return gulp.src('src/html/' + config.template_file + '.twig')
+        .pipe(twig())
+        .pipe(gulp.dest('./output_dev'))
         .pipe(reload({stream:true}))
         .pipe(gulp.dest('./'));
 });
