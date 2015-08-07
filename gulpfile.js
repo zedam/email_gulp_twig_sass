@@ -50,6 +50,9 @@ gulp.task('build', function() {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> gulp tasks
 // Build our dev templates
 gulp.task('build_dev', function() {
     return gulp.src('src/html/' + config.template_file + '.twig')
@@ -59,8 +62,6 @@ gulp.task('build_dev', function() {
         .pipe(gulp.dest('./'));
 });
 
-=======
->>>>>>> initial commit
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/scss/*.scss', ['sass']);
