@@ -61,7 +61,7 @@ gulp.task('build_dev', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch('src/html/*.twig', ['build']);
+    gulp.watch('src/html/**/*.twig', ['build']);
     gulp.watch('src/css/*.css', ['build']);
 });
 

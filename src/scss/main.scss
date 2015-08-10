@@ -1,5 +1,9 @@
 @import "mixins";
 
+@import "column_2_style";
+/*
+@import "column_2";
+
 html, body {
 	background: #CCC;
 }
@@ -41,13 +45,47 @@ table {
 	  	width: 100%;
 
 		td {
-			vertical-align: top;
-			width: 30%;
+			/!*vertical-align: top;
+			width: 30%;*!/
 
-			&:first-child {
+			/!*&:first-child {
 				padding-right: 20px;
 				width: 70%;
-			}
+			}*!/
 		}
 	}
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    background-color: #ffffff;
+}
+table {
+    border-spacing: 0;
+    font-family: sans-serif;
+    color: #333333;
+}
+td {
+    padding: 0;
+}
+img {
+    border: 0;
+}
+
+.wrapper {
+
+}
+
+.headerText {
+
+}
+
+.topImage {
+
+}
+
+.mainBody {
+
 }

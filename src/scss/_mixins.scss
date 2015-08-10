@@ -1,3 +1,16 @@
+
+$root: '/';
+$fonts: '#{$root}bundles/app/fonts/';
+$images: '#{$root}bundles/app/images/';
+$images_c: '#{$root}bundles/app/images/component/';
+$images_m: '#{$root}bundles/app/images/misc/';
+
+// media querie values
+$break-small: 320px;
+$break-large: 600px;
+$break-large-2: 1420px;
+
+
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return $remSize * 1rem;
@@ -6,4 +19,193 @@
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
+}
+
+
+@mixin animation($vars, $duration: $animation) {
+    animation: $arguments;
+}
+
+@mixin background-rgba($vars) {
+    $hex: rgbahex($vars);
+    background-color: $vars;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=' + $hex + ',endColorstr=' + $hex + ')';
+}
+
+@mixin background-size($horizontal: center, $vertical: center) {
+    background-position: $horizontal $vertical;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@mixin border-radius($radius: $border-radius) {
+    border-radius: $radius;
+}
+
+@mixin box-sizing() {
+    box-sizing: border-box;
+}
+
+@mixin box-shadow($vars) {
+    box-shadow: $vars;
+}
+
+// clearfix
+// http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin cover() {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+// text overflow to dots (...)
+// (add width and height and block, only works with single line)
+// https://developer.mozilla.org/en-US/docs/CSS/text-overflow
+@mixin ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+// https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin image-replacement() {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+// use list in layout
+@mixin list-layout() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// responsive media queries
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    } @else if $media == tablet {
+        @media only screen and (min-width: $break-small + 1) {
+            @content;
+        }
+    } @else if $media == desktop {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    } @else if $media == desktop_big {
+        @media only screen and (min-width: $break-large-2) {
+            @content;
+        }
+    }
+}
+
+@mixin retina() {
+
+    @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx)
+    {
+        @content;
+    }
+}
+
+@mixin retina_device($device) {
+
+    @if $device == mobile {
+        $device-media: 'max-width: ' + $break-small - 1;
+    }
+    @else if $device == tablet {
+        $device-media: 'min-width: ' + $break-small;
+    }
+    @else if $device == desktop {
+        $device-media: 'min-width: ' + $break-large;
+    }
+    @else if $device == desktop_big {
+        $device-media: 'min-width: ' + $break-large-2;
+    }
+
+
+    @media
+    only screen and (min--moz-device-pixel-ratio: 1.3),
+    only screen and (-o-min-device-pixel-ratio: 2.6/2),
+    only screen and (-webkit-min-device-pixel-ratio: 1.3),
+    only screen and (min-device-pixel-ratio: 1.3),
+    only screen and (min-resolution: 1.3dppx)
+    {
+        @content;
+    }
+}
+
+@function image_path($device, $file) {
+    @return $root + 'bundles/app/img/' + $device + '/' + $file;
+}
+
+@mixin image($file, $device) {
+    background-image: url(image_path($device, $file));
+    background-repeat: no-repeat;
+
+    @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+        & {
+            background-image: url(image_path($device, str-slice($file , 0 , -5 ) + '@2x' + str-slice($file , -4 , -1)));
+            @include background-size();
+        }
+    }
+}
+
+@mixin opacity($opacity) {
+    $opacity_ie: $opacity * 100;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{opacity_ie})'; // IE8
+    opacity: $opacity;
+}
+
+@mixin size($width, $height: $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin transform($vars) {
+    -moz-transform: $vars;
+    -webkit-transform: $vars;
+    transform: $vars;
+}
+
+@mixin transition($property: all, $duration: $animation, $delay: 0s, $ease: ease-out) {
+    -moz-transition: $property $duration $delay $ease;
+    -webkit-transition: $property $duration $delay $ease;
+    transition: $property $duration $delay $ease;
+}
+
+@mixin transition_str($vars) {
+    -moz-transition: $vars;
+    -webkit-transition: $vars;
+    transition: $vars;
+}
+
+@mixin perspective($perspective) {
+    -webkit-perspective: $perspective;
+    perspective: $perspective;
 }

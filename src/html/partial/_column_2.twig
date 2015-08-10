@@ -1,0 +1,73 @@
+<!-- 3 Start of Columns -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+
+    <tbody>
+    <tr>
+        <td width="100%" align="center">
+            <center class="wrapper">
+                <div class="webkit">
+
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="600" align="center">
+                        <tr>
+                            <td>
+                    <![endif]-->
+
+
+
+                    <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0"
+                           class="columns_2_device_width">
+                        <tbody>
+                        <!-- image 2 -->
+                        <tr>
+                            <td>
+                                <!-- col 1 -->
+
+                                {% include "_column_2_cell.twig" with {
+                                    title: "Heading 1",
+                                    description: "Two lines of Locvrem Ipsum will just fit in here.",
+                                    link_txt: "Read More",
+                                    link_url: "aaa",
+                                } only %}
+
+                                <!-- spacing -->
+                                <table width="20" align="left" border="0" cellpadding="0" cellspacing="0"
+                                       class="removeMobile">
+                                    <tbody>
+                                    <tr>
+                                        <td width="100%" height="15"
+                                            style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                            &nbsp;</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <!-- end of spacing -->
+
+                                <!-- col 1 -->
+                                {% include "_column_2_cell.twig" with {
+                                    title: "Heading 2",
+                                    description: "Two lines of Locvrem Ipsum will just fit in here.",
+                                    link_txt: "Read More",
+                                    link_url: "aaa",
+                                }
+                                %}
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </div>
+            </center>
+        </td>
+    </tr>
+    </tbody>
+
+</table>

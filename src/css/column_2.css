@@ -1,0 +1,17 @@
+.columns_2_device_width {
+  width: 100% !important; }
+
+.columns_2_cell {
+  max-width: 186px !important; }
+
+.column_2_title {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 18px;
+  color: #666666;
+  text-align: center;
+  line-height: 24px; }
+
+.column_2_cell_separator {
+  font-size: 1px;
+  line-height: 1px;
+  mso-line-height-rule: exactly; }
