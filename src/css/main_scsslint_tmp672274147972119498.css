@@ -87,7 +87,7 @@ table {
 }*/
 /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
 body {
-  background-color: #ddd;
+  background-color: #eee;
   margin: 0;
   min-width: 100%;
   padding: 0;
@@ -95,10 +95,9 @@ body {
   -ms-text-size-adjust: none; }
 
 table {
-  background-color: #eee;
   border-spacing: 0;
-  color: #333333;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  color: #333333; }
   table td {
     border-collapse: collapse;
     padding: 0; }

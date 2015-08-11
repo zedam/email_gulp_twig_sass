@@ -1,38 +1,5 @@
-.column_2_cell_title {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 18px;
-  color: #666666;
-  text-align: center;
-  line-height: 24px; }
-
-.column_2_cell_description {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 14px;
-  color: #889098;
-  text-align: center;
-  line-height: 24px; }
-
-.column_2_cell_separator {
-  font-size: 1px;
-  height: 15px;
-  line-height: 1px;
-  mso-line-height-rule: exactly;
-  width: 20px; }
-
-.column_2_image {
-  display: block;
-  border: none;
-  outline: none;
-  text-decoration: none; }
-
-.column_2_cell_link {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 14px;
-  color: #0a8cd8;
-  text-align: center;
-  line-height: 20px; }
-
 /*
+@import "column_2";
 
 html, body {
 	background: #CCC;
@@ -87,7 +54,7 @@ table {
 }*/
 /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
 body {
-  background-color: #ddd;
+  background-color: #ffffff;
   margin: 0;
   min-width: 100%;
   padding: 0;
@@ -95,10 +62,9 @@ body {
   -ms-text-size-adjust: none; }
 
 table {
-  background-color: #eee;
   border-spacing: 0;
-  color: #333333;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  color: #333333; }
   table td {
     border-collapse: collapse;
     padding: 0; }
@@ -130,47 +96,8 @@ a img {
   display: block; }
 
 /* This resolves the Outlook 07, 10, and Gmail td padding issue. */
-.columns_2_device_width {
+.outer {
   Margin: 0 auto;
+  width: 100%;
   max-width: 580px;
-  table-layout: fixed;
-  width: 100%; }
-
-/* One column layout */
-.one-column .contents {
-  text-align: left; }
-
-.one-column p {
-  font-size: 14px;
-  Margin-bottom: 10px; }
-
-/*Two column layout*/
-.inner {
-  background: #eee;
-  padding: 30px; }
-
-.two-column {
-  text-align: center;
-  font-size: 0; }
-
-.two-column .column {
-  width: 100%;
-  max-width: 290px;
-  display: inline-block;
-  vertical-align: top; }
-
-.two-column .contents {
-  font-size: 14px;
-  text-align: left; }
-
-.two-column img {
-  width: 100%;
-  max-width: 290px;
-  height: auto; }
-
-.two-column .title {
-  padding: 0 10px; }
-
-.two-column .text {
-  line-height: 18px;
-  padding: 10px; }
+  table-layout: fixed; }

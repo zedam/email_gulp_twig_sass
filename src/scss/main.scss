@@ -1,8 +1,8 @@
 @import "mixins";
-
 @import "column_2_style";
+
+//@import "column_2";
 /*
-@import "column_2";
 
 html, body {
 	background: #CCC;
@@ -56,22 +56,38 @@ table {
 	}
 }*/
 
+/* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
 body {
+    background-color: #ddd;
     margin: 0;
-    padding: 0;
     min-width: 100%;
-    background-color: #ffffff;
-}
-table {
-    border-spacing: 0;
-    font-family: sans-serif;
-    color: #333333;
-}
-td {
     padding: 0;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
 }
+
+table {
+    background-color: #eee;
+    border-spacing: 0;
+    color: #333333;
+    font-family: sans-serif;
+
+    td {
+        border-collapse: collapse;
+        padding: 0;
+    }
+}
+/* Resets all body margins and padding to 0 for good measure */
 img {
     border: 0;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    display: block;
+}
+
+a img {
+    border: none;
 }
 
 .wrapper {
@@ -88,4 +104,87 @@ img {
 
 .mainBody {
 
+}
+
+.ReadMsgBody {
+    width: 100%;
+}
+
+/* Forces Hotmail to display emails at full width */
+.ExternalClass {
+    width: 100%;
+
+    p, span, font, td, div {
+        line-height: 100%;
+    }
+
+    /* Forces Hotmail to display normal line spacing */
+    * {
+        line-height: 100%
+    }
+}
+
+
+.thread-item.expanded .thread-body .body, .msg-body {
+    display: block;
+}
+/* This resolves the Outlook 07, 10, and Gmail td padding issue. */
+
+
+.columns_2_device_width {
+    Margin: 0 auto;
+    max-width: 580px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+
+
+/* One column layout */
+.one-column .contents {
+    text-align: left;
+}
+.one-column p {
+    font-size: 14px;
+    Margin-bottom: 10px;
+}
+
+/*Two column layout*/
+
+.inner {
+    background: #eee;
+    padding: 30px;
+}
+
+.two-column {
+    text-align: center;
+    font-size: 0;
+}
+
+.two-column .column {
+    width: 100%;
+    max-width: 290px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.two-column .contents {
+    font-size: 14px;
+    text-align: left;
+}
+
+.two-column img {
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+}
+
+.two-column .title {
+    padding: 0 10px;
+}
+
+.two-column .text {
+    line-height: 18px;
+    padding: 10px;
 }

@@ -5,10 +5,6 @@
 .columns_2_cell {
     max-width: 240px !important;
     margin: auto;
-
-    @include respond-to(tablet) {
-
-    }
 }
 
 .column_2_cell_title {
