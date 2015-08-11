@@ -71,7 +71,8 @@ gulp.task('default', ['sass', 'browser-sync', 'build', 'watch']);
 // Add ability to send test emails
 // Add ability to send test emails
 gulp.task('send', function () {
-    return sendEmail(config.template_file + '.html', config.testing.to);
+    console.log(util.env.template);
+    return sendEmail(util.env.template + '.html', config.testing.to);
 });
 
 gulp.task('litmus', function () {

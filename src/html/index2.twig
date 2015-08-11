@@ -15,44 +15,48 @@
         </tr>
         <tr class="mainBody">
             <td>
+                <center class="wrapper">
+                    <div class="webkit">
 
-                {# One cell partial #}
-                {% include "partial/_column_1_cell.twig" with {
-                    title: "Heading 1",
-                    description: "Two lines of Locvrem Ipsum will just fit in here.",
-                    image: "http://bravoure.nl/_external/newsletter/20150806-test/header_2.jpg",
-                    link_txt: "Read More",
-                    link_url: "aaa",
-                    content: "22:00 - 00:00  Dubspeeka<br/>
-                                00:00 - 01:30  Ida Engberg<br/>
-                                01:30 - 03:00  Dense & Pika<br/>
-                                03:00 - 05:00  Adam Beyer<br/>
-                                05:00 - 06:30  Luigi Madonna<br/>
-                                06:30 - 08:00  Alan Fitzpatrick"
-                } only %}
-
-
-                {# One cell partial #}
-                {% include "partial/_column_1_cell.twig" with {
-                    title: "Heading 1",
-                    description: "Two lines of Locvrem Ipsum will just fit in here.",
-                    image: "http://bravoure.nl/_external/newsletter/20150806-test/header_1.jpg",
-                    link_txt: "Read More",
-                    link_url: "aaa",
-                    content: "22:00 - 00:00  Dubspeeka<br/>
-                                                00:00 - 01:30  Ida Engberg<br/>
-                                                01:30 - 03:00  Dense & Pika<br/>
-                                                03:00 - 05:00  Adam Beyer<br/>
-                                                05:00 - 06:30  Luigi Madonna<br/>
-                                                06:30 - 08:00  Alan Fitzpatrick"
-                } only %}
+                        {# One cell partial #}
+                        {% include "partial/_column_1_cell.twig" with {
+                            title: "Heading 1",
+                            description: "Two lines of Locvrem Ipsum will just fit in here.",
+                            image: "http://bravoure.nl/_external/newsletter/20150806-test/header_2.jpg",
+                            link_txt: "Read More",
+                            link_url: "aaa",
+                            content: "22:00 - 00:00  Dubspeeka<br/>
+                                        00:00 - 01:30  Ida Engberg<br/>
+                                        01:30 - 03:00  Dense & Pika<br/>
+                                        03:00 - 05:00  Adam Beyer<br/>
+                                        05:00 - 06:30  Luigi Madonna<br/>
+                                        06:30 - 08:00  Alan Fitzpatrick"
+                        } only %}
 
 
-                {# Two cell partial #}
-                {% include 'partial/_column_2.twig' with {
-                    title: 'This is a sample email template',
-                    image: 'http://placehold.it/200x200/E82C0C/000000/&amp;text=Side',
-                } only %}
+                        {# One cell partial #}
+                        {% include "partial/_column_1_cell.twig" with {
+                            title: "Heading 1",
+                            description: "Two lines of Locvrem Ipsum will just fit in here.",
+                            image: "http://bravoure.nl/_external/newsletter/20150806-test/header_1.jpg",
+                            link_txt: "Read More",
+                            link_url: "aaa",
+                            content: "22:00 - 00:00  Dubspeeka<br/>
+                                                        00:00 - 01:30  Ida Engberg<br/>
+                                                        01:30 - 03:00  Dense & Pika<br/>
+                                                        03:00 - 05:00  Adam Beyer<br/>
+                                                        05:00 - 06:30  Luigi Madonna<br/>
+                                                        06:30 - 08:00  Alan Fitzpatrick"
+                        } only %}
+
+
+                        {# Two cell partial #}
+                        {% include 'partial/_column_2.twig' with {
+                            title: 'This is a sample email template',
+                            image: 'http://placehold.it/200x200/E82C0C/000000/&amp;text=Side',
+                        } only %}
+                    </div>
+                </center>
             </td>
         </tr>
     </table>

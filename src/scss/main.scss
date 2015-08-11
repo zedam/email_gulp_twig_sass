@@ -90,11 +90,27 @@ a img {
     border: none;
 }
 
-.wrapper {
 
+.table_main_container {
+    border-spacing: 0;
+    color:#333333;
+    font-family: sans-serif;
+    table-layout: fixed;
+}
+
+.wrapper {
+    table-layout: fixed;
+    width: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.webkit {
+    max-width: 580px;
 }
 
 .headerText {
+    font-size: 12px;
 
 }
 
